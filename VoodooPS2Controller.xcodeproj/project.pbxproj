@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -448,7 +448,7 @@
 				ORGANIZATIONNAME = rehabman;
 			};
 			buildConfigurationList = 8416780B161B55B2002C60E6 /* Build configuration list for PBXProject "VoodooPS2Controller" */;
-			compatibilityVersion = "Xcode 8.0";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -726,6 +726,7 @@
 		84167825161B55B2002C60E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VoodooPS2Controller/VoodooPS2Controller-Prefix.pch";
@@ -742,6 +743,7 @@
 		84167826161B55B2002C60E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VoodooPS2Controller/VoodooPS2Controller-Prefix.pch";
@@ -826,12 +828,14 @@
 		84167861161B56C4002C60E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/VoodooPS2Controller.kext/Contents/PlugIns";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VoodooPS2Trackpad/VoodooPS2Trackpad-Prefix.pch";
 				INFOPLIST_FILE = "VoodooPS2Trackpad/VoodooPS2Trackpad-Info.plist";
 				MODULE_NAME = com.rehabman.driver.VoodooPS2Trackpad;
+				MODULE_VERSION = 6.0.1;
 				OTHER_CFLAGS = "-fno-stack-protector";
 				PRODUCT_BUNDLE_IDENTIFIER = org.rehabman.voodoo.driver.PS2Trackpad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -843,12 +847,14 @@
 		84167862161B56C4002C60E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/VoodooPS2Controller.kext/Contents/PlugIns";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VoodooPS2Trackpad/VoodooPS2Trackpad-Prefix.pch";
 				INFOPLIST_FILE = "VoodooPS2Trackpad/VoodooPS2Trackpad-Info.plist";
 				MODULE_NAME = com.rehabman.driver.VoodooPS2Trackpad;
+				MODULE_VERSION = 6.0.1;
 				OTHER_CFLAGS = "-fno-stack-protector";
 				PRODUCT_BUNDLE_IDENTIFIER = org.rehabman.voodoo.driver.PS2Trackpad;
 				PRODUCT_NAME = "$(TARGET_NAME)";

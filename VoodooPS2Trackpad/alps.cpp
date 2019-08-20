@@ -140,6 +140,7 @@ static const struct alps_model_info alps_model_data[] = {
     { { 0x62, 0x02, 0x14 }, 0x00, ALPS_PROTO_V2, 0xcf, 0xcf,
         ALPS_PASS | ALPS_DUALPOINT | ALPS_PS2_INTERLEAVED },
     { { 0x73, 0x02, 0x50 }, 0x00, ALPS_PROTO_V2, 0xcf, 0xcf, ALPS_FOUR_BUTTONS },
+    { { 0x73, 0x03, 0x64 }, 0x00, ALPS_PROTO_V2, 0xff, 0xff, ALPS_PASS | ALPS_DUALPOINT | ALPS_PS2_INTERLEAVED },
     /* Dell Vostro 1400 */
     { { 0x52, 0x01, 0x14 }, 0x00, ALPS_PROTO_V2, 0xff, 0xff,
         ALPS_PASS | ALPS_DUALPOINT | ALPS_PS2_INTERLEAVED },
@@ -2410,7 +2411,7 @@ bool ALPS::alps_hw_init_ss4_v2()
     
 }
 
-bool ALPS::ps2_command(unsigned char value, UInt8 command)
+void ALPS::ps2_command(unsigned char value, UInt8 command)
 {
     TPS2Request<2> request;
     int cmdCount = 0;
@@ -2424,12 +2425,12 @@ bool ALPS::ps2_command(unsigned char value, UInt8 command)
     _device->submitRequestAndBlock(&request);
     
     if (request.commandsCount != 2) {
-        return false;
+        return;
     }
     //return request.commandsCount = cmdCount;
 }
 
-bool ALPS::ps2_command_short(UInt8 command)
+void ALPS::ps2_command_short(UInt8 command)
 {
     TPS2Request<1> request;
     int cmdCount = 0;
@@ -2441,7 +2442,7 @@ bool ALPS::ps2_command_short(UInt8 command)
     _device->submitRequestAndBlock(&request);
     
     if (request.commandsCount != 1) {
-        return false;
+        return;
     }
     //return request.commandsCount = cmdCount;
 }
