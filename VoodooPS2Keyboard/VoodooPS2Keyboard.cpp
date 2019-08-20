@@ -93,6 +93,7 @@ void* _org_rehabman_dontstrip_[] =
 // get some keyboard id information from IOHIDFamily/IOHIDKeyboard.h and Gestalt.h
 //#define APPLEPS2KEYBOARD_DEVICE_TYPE	205 // Generic ISO keyboard
 //#define APPLEPS2KEYBOARD_DEVICE_TYPE	3   // Unknown ANSI keyboard
+#define APPLEPS2KEYBOARD_DEVICE_TYPE  0x1B
 
 OSDefineMetaClassAndStructors(ApplePS2Keyboard, IOHIKeyboard);
 
@@ -411,8 +412,8 @@ ApplePS2Keyboard* ApplePS2Keyboard::probe(IOService * provider, SInt32 * score)
     TPS2Request<2> request;
     request.commands[0].command = kPS2C_WriteDataPort;
     request.commands[0].inOrOut = kDP_TestKeyboardEcho;
-    request.commands[1].command = kPS2C_ReadDataPort;
-    request.commands[1].inOrOut = 0x00;
+    request.commands[1].command = kPS2C_ReadDataPortAndCompare;
+    request.commands[1].inOrOut = kDP_TestKeyboardEcho; //Slice 0xEE
     request.commandsCount = 2;
     assert(request.commandsCount <= countof(request.commands));
     device->submitRequestAndBlock(&request);
@@ -1681,6 +1682,18 @@ bool ApplePS2Keyboard::dispatchKeyboardEventWithPacket(const UInt8* packet)
                 keyCode = 0;
             }
             break;
+      case 0x130: keyCode = 0x7d; break;       // E030 = volume up
+      case 0x12e: keyCode = 0x7e; break;       // E02E = volume down
+      case 0x120: keyCode = 0x7f; break;       // E020 = volume mute
+
+      case 0x119: keyCode = 0x78; break;    //E019 = next track
+      case 0x110: keyCode = 0x77; break;    //E010 = prev track
+      case 0x124: keyCode = 0x76; break;    //E024 = stop
+      case 0x122: keyCode = 0x73; break;    //E022 = play/pause
+
+        //    case 0x21: keyCode = 0x54; break;    //E021 = calculator
+        //    case 0x16: keyCode = 0x55; break;    //E016 = logout
+      case 0x10b: keyCode = 0x7a; break;    //E04d = VideoMirror
             
         case 0x0153:    // delete
             // check for Ctrl+Alt+Delete? (three finger salute)

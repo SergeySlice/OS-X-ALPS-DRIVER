@@ -27,10 +27,35 @@
 		84EB0AE516F0AD9600016108 /* ApplePS2MouseDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84833FA0161B627D00845294 /* ApplePS2MouseDevice.cpp */; };
 		84F424E3161B59E500777765 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F424C3161B593D00777765 /* Cocoa.framework */; };
 		84F424E4161B59E500777765 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F424C5161B593D00777765 /* PreferencePanes.framework */; };
+		A521E7B9230BBDB700930BC8 /* VoodooPS2Keyboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521E7B8230BBDB700930BC8 /* VoodooPS2Keyboard.cpp */; };
 		BA560D361734DFF100914439 /* Decay.h in Headers */ = {isa = PBXBuildFile; fileRef = BA560D351734DFF100914439 /* Decay.h */; };
 		BA5C70CF17338E7000E30E1A /* VoodooPS2TouchPadBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3F4F41B76902F9877062D93 /* VoodooPS2TouchPadBase.cpp */; };
 		BA5C70D017338E8600E30E1A /* VoodooPS2TouchPadBase.h in Headers */ = {isa = PBXBuildFile; fileRef = C3F4F859C067FD563476F515 /* VoodooPS2TouchPadBase.h */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5B23022230BBB88007D393A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84167808161B55B2002C60E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8416782C161B5613002C60E6;
+			remoteInfo = VoodooPS2Keyboard;
+		};
+		A5B23024230BBB8D007D393A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84167808161B55B2002C60E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84167854161B56C4002C60E6;
+			remoteInfo = VoodooPS2Trackpad;
+		};
+		A5B23026230BBB95007D393A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84167808161B55B2002C60E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84C337991698B693009B8177;
+			remoteInfo = VoodooPS2Daemon;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8404565C161E3AAF00D74D7F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -69,6 +94,7 @@
 		84F424C7161B593D00777765 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		84F424C8161B593D00777765 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		84F424C9161B593D00777765 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A521E7B8230BBDB700930BC8 /* VoodooPS2Keyboard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VoodooPS2Keyboard.cpp; sourceTree = "<group>"; };
 		BA560D351734DFF100914439 /* Decay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decay.h; sourceTree = "<group>"; };
 		C3F4F41B76902F9877062D93 /* VoodooPS2TouchPadBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VoodooPS2TouchPadBase.cpp; sourceTree = "<group>"; };
 		C3F4F603A234F724795A2FBD /* VoodooPS2Trackpad.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; name = VoodooPS2Trackpad.kext; path = "../../Library/Caches/appCode20/DerivedData/VoodooPS2Controller-5fc0befb/Build/Products/Debug/VoodooPS2Trackpad.kext"; sourceTree = "<group>"; };
@@ -202,6 +228,7 @@
 			children = (
 				84833FA9161B629500845294 /* ApplePS2ToADBMap.h */,
 				84167834161B5613002C60E6 /* VoodooPS2Keyboard.h */,
+				A521E7B8230BBDB700930BC8 /* VoodooPS2Keyboard.cpp */,
 				8416782F161B5613002C60E6 /* Supporting Files */,
 			);
 			path = VoodooPS2Keyboard;
@@ -328,6 +355,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				A5B23027230BBB95007D393A /* PBXTargetDependency */,
+				A5B23025230BBB8D007D393A /* PBXTargetDependency */,
+				A5B23023230BBB88007D393A /* PBXTargetDependency */,
 			);
 			name = VoodooPS2Controller;
 			productName = VoodooPS2Controller;
@@ -560,6 +590,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A521E7B9230BBDB700930BC8 /* VoodooPS2Keyboard.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +632,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5B23023230BBB88007D393A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8416782C161B5613002C60E6 /* VoodooPS2Keyboard */;
+			targetProxy = A5B23022230BBB88007D393A /* PBXContainerItemProxy */;
+		};
+		A5B23025230BBB8D007D393A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84167854161B56C4002C60E6 /* VoodooPS2Trackpad */;
+			targetProxy = A5B23024230BBB8D007D393A /* PBXContainerItemProxy */;
+		};
+		A5B23027230BBB95007D393A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84C337991698B693009B8177 /* VoodooPS2Daemon */;
+			targetProxy = A5B23026230BBB95007D393A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8404565B161E3AAF00D74D7F /* InfoPlist.strings */ = {
@@ -722,7 +771,7 @@
 		84167825161B55B2002C60E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -742,7 +791,7 @@
 		84167826161B55B2002C60E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -762,12 +811,15 @@
 		84167839161B5613002C60E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/VoodooPS2Controller.kext/Contents/PlugIns";
+				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VoodooPS2Keyboard/VoodooPS2Keyboard-Prefix.pch";
 				INFOPLIST_FILE = "VoodooPS2Keyboard/VoodooPS2Keyboard-Info.plist";
 				MODULE_NAME = com.rehabman.driver.VoodooPS2Keyboard;
+				MODULE_VERSION = 6.0.2;
 				OTHER_CFLAGS = "-fno-stack-protector";
 				PRODUCT_BUNDLE_IDENTIFIER = org.rehabman.voodoo.driver.PS2Keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -779,12 +831,15 @@
 		8416783A161B5613002C60E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/VoodooPS2Controller.kext/Contents/PlugIns";
+				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VoodooPS2Keyboard/VoodooPS2Keyboard-Prefix.pch";
 				INFOPLIST_FILE = "VoodooPS2Keyboard/VoodooPS2Keyboard-Info.plist";
 				MODULE_NAME = com.rehabman.driver.VoodooPS2Keyboard;
+				MODULE_VERSION = 6.0.2;
 				OTHER_CFLAGS = "-fno-stack-protector";
 				PRODUCT_BUNDLE_IDENTIFIER = org.rehabman.voodoo.driver.PS2Keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -796,6 +851,7 @@
 		8416784D161B56A2002C60E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/VoodooPS2Controller.kext/Contents/PlugIns";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -813,6 +869,7 @@
 		8416784E161B56A2002C60E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/VoodooPS2Controller.kext/Contents/PlugIns";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -830,7 +887,7 @@
 		84167861161B56C4002C60E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/VoodooPS2Controller.kext/Contents/PlugIns";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -849,7 +906,7 @@
 		84167862161B56C4002C60E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/VoodooPS2Controller.kext/Contents/PlugIns";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -868,6 +925,7 @@
 		84C337A11698B693009B8177 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -876,6 +934,7 @@
 		84C337A21698B693009B8177 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -883,6 +942,7 @@
 		84F424F5161B59E500777765 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VoodooPS2synapticsPane/VoodooPS2synapticsPane-Prefix.pch";
@@ -898,6 +958,7 @@
 		84F424F6161B59E500777765 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VoodooPS2synapticsPane/VoodooPS2synapticsPane-Prefix.pch";
@@ -912,6 +973,7 @@
 		84F42503161B5A4900777765 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -920,6 +982,7 @@
 		84F42504161B5A4900777765 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
