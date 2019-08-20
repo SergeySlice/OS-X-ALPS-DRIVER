@@ -92,7 +92,7 @@ void* _org_rehabman_dontstrip_[] =
 
 // get some keyboard id information from IOHIDFamily/IOHIDKeyboard.h and Gestalt.h
 //#define APPLEPS2KEYBOARD_DEVICE_TYPE	205 // Generic ISO keyboard
-#define APPLEPS2KEYBOARD_DEVICE_TYPE	3   // Unknown ANSI keyboard
+//#define APPLEPS2KEYBOARD_DEVICE_TYPE	3   // Unknown ANSI keyboard
 
 OSDefineMetaClassAndStructors(ApplePS2Keyboard, IOHIKeyboard);
 

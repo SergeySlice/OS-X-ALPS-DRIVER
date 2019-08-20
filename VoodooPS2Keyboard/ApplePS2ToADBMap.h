@@ -121,20 +121,20 @@ static const UInt8 PS2ToADBMapStock[ADB_CONVERTER_LEN] =
     0x41,   // 53  Keypad . Delete
     0x44,   // 54  SysReq
     0x46,   // 55
-    0x0a,   // 56  Europe 2(ISO)
+    0x0a,   // 56  Europe 2(ISO) º\ª (Spanish)
     0x67,   // 57  F11
     0x6f,   // 58  F12
     0x51,   // 59  Keypad =
-    DEADKEY,// 5a
-    DEADKEY,// 5b
+    0x4f,   // 5a Custom WWW
+  ﻿  0x50,   // 5b Custom My Documents
     0x5f,   // 5c  Keyboard Int'l 6 (PC9800 Keypad , )
     DEADKEY,// 5d
     DEADKEY,// 5e
     DEADKEY,// 5f
-    DEADKEY,// 60
-    DEADKEY,// 61
-    DEADKEY,// 62
-    DEADKEY,// 63
+    0x3e,   // 60  Right Ctrl
+    0x3d,   // 61  Right Alt
+    0x4c,   // 62  Keypad Enter
+    0x4b,   // 63  Keypad / //??
     0x69,   // 64  F13
     0x6b,   // 65  F14
     0x71,   // 66  F15
@@ -143,27 +143,27 @@ static const UInt8 PS2ToADBMapStock[ADB_CONVERTER_LEN] =
     0x4f,   // 69  F18
     0x50,   // 6a  F19
     0x5a,   // 6b  F20
-    DEADKEY,// 6c  F21
-    DEADKEY,// 6d  F22
-    DEADKEY,// 6e  F23
-    DEADKEY,// 6f
-    0x68,   // 70  Keyboard Intl'2 (Japanese Katakana/Hiragana)
-    DEADKEY,// 71
-    DEADKEY,// 72
-    0x5e,   // 73  Keyboard Int'l 1 (Japanese Ro)
+    0x73,   // 6c  Home
+    0x77,   // 6d  End
+    0x69,   // 6e  Print Scrn
+    0x71,   // 6f  Pause
+    0x37,   // 70  Left Window
+    0x36,   // 71  Right Window
+    0x6e,   // 72  Applications
+    0x34,   // 73 Custom Play/Pause
     DEADKEY,// 74
     DEADKEY,// 75
-    DEADKEY,// 76  F24 , Keyboard Lang 5 (Japanese Zenkaku/Hankaku)
-    0x68,   // 77  Keyboard Lang 4 (Japanese Hiragana)
-    0x68,   // 78  Keyboard Lang 3 (Japanese Katakana)
+    0x3f,   // 76 Custom Stop
+    0x40,   // 77 Custom Prev Track
+    0x42,   // 78 Custom Next Track
     0x68,   // 79  Keyboard Int'l 4 (Japanese Henkan)
-    DEADKEY,// 7a
+    0x4d,   // 7a VidMirror
     0x66,   // 7b  Keyboard Int'l 5 (Japanese Muhenkan)
-    DEADKEY,// 7c
-    0x5d,   // 7d  Keyboard Int'l 3 (Japanese Yen)
-    0x5f,   // 7e  Keypad , (Brazilian Keypad .)
-    DEADKEY,// 7f 
-    DEADKEY,// 80 
+    0x7f,   // 7c
+    0x48,   // 7d Volume Up
+    0x49,   // 7e Volume Down
+  ﻿  0x4a,   // 7f Volume Mute
+    DEADKEY,// 80
     DEADKEY,// 81 
     DEADKEY,// 82 
     DEADKEY,// 83 
