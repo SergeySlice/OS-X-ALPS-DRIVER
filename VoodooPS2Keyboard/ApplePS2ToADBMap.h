@@ -120,14 +120,14 @@ static const UInt8 PS2ToADBMapStock[ADB_CONVERTER_LEN] =
     0x52,   // 52  Keypad 0 Insert
     0x41,   // 53  Keypad . Delete
     0x44,   // 54  SysReq
-    0x46,   // 55
-    0x0a,   // 56  Europe 2(ISO) º\ª (Spanish)
+    0x46,   // 55  Custom Logout
+    0x32,   // 56  Europe 2(ISO) º\ª (Spanish)
     0x67,   // 57  F11
     0x6f,   // 58  F12
     0x51,   // 59  Keypad =
     0x4f,   // 5a Custom WWW
     0x50,   // 5b Custom My Documents
-    0x5f,   // 5c  Keyboard Int'l 6 (PC9800 Keypad , )
+    DEADKEY,   // 5c  Keyboard Int'l 6 (PC9800 Keypad , )
     DEADKEY,// 5d
     DEADKEY,// 5e
     DEADKEY,// 5f
@@ -135,14 +135,14 @@ static const UInt8 PS2ToADBMapStock[ADB_CONVERTER_LEN] =
     0x3d,   // 61  Right Alt
     0x4c,   // 62  Keypad Enter
     0x4b,   // 63  Keypad / //??
-    0x69,   // 64  F13
-    0x6b,   // 65  F14
-    0x71,   // 66  F15
-    0x6a,   // 67  F16
-    0x40,   // 68  F17
-    0x4f,   // 69  F18
-    0x50,   // 6a  F19
-    0x5a,   // 6b  F20
+    0x7e,  // 64  Up Arrow
+    0x7d,  // 65  Down Arrow
+    0x7b,  // 66  Left Arrow
+    0x7c,  // 67  Right Arrow
+    0x72,  // 68  Insert
+    0x75,  // 69  Delete
+    0x74,  // 6a  Page Up
+    0x79,  // 6b  Page Down
     0x73,   // 6c  Home
     0x77,   // 6d  End
     0x69,   // 6e  Print Scrn
@@ -156,9 +156,9 @@ static const UInt8 PS2ToADBMapStock[ADB_CONVERTER_LEN] =
     0x3f,   // 76 Custom Stop
     0x40,   // 77 Custom Prev Track
     0x42,   // 78 Custom Next Track
-    0x68,   // 79  Keyboard Int'l 4 (Japanese Henkan)
+    DEADKEY,   // 79  Keyboard Int'l 4 (Japanese Henkan)
     0x4d,   // 7a VidMirror
-    0x66,   // 7b  Keyboard Int'l 5 (Japanese Muhenkan)
+    DEADKEY,   // 7b  Keyboard Int'l 5 (Japanese Muhenkan)
     0x7f,   // 7c
     0x48,   // 7d Volume Up
     0x49,   // 7e Volume Down
